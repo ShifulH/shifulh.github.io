@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+ 
+  <style>
+    .test {
+      color: red;
+      font-weight: 900;
+    }
+    .bg {
+      background-color: gainsboro;
+      min-height:300px;
+    }
+    .textSizeLarge{
+      font-size: 4rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  
+  
+  <div id="myid">Welcome to Shiful</div>
+
+  
+  <!-- <p id="myseondid">opening </p> -->
+
+  <script>
+     
+    var newVar = document.getElementById("myid");
+    function myfirstFunc(){
+      newVar.innerHTML = "<div> <h1>hello world: </h1> <p> this is a test</p> </div>";
+      newVar.classList.add("test");
+      newVar.classList.remove("bg");
+    }
+    
+    function removeClass(){
+      newVar.innerHTML = "hello world: No color " + 9;
+      
+      
+      var x = 0;
+      var y = x > 9;
+      if (x > 9){
+        newVar.innerHTML = "X is greater than 9";
+        // newVar.classList.remove("test");
+        // newVar.classList.add("bg");
+      } else {
+        newVar.innerHTML = "X is less than 9";
+        // newVar.classList.remove("bg");
+        // newVar.classList.add("test");
+      }
+      console.log('What is y: ', y);
+    }
+   
+  
+   
+  </script>
+
+
+
+  
+  <button onclick="myfirstFunc()">Add Class</button>
+  <button onclick="removeClass()">Remove Class</button>
+  <button onclick="mysecondFunc()">my second button</button>
+  <button onclick="myFunction()">Change Text</button>
+  <button onclick="myFunction2()">Change Another Text</button>
+  <button onclick="myFunction3()">Class-test</button>
+  <button onclick="myFunction4()">Class Large Text and Toggle</button>
+  <button onclick="myFunction5()">Class Remove</button>
+  <button onclick="writeFunction()">Write Function</button>
+  <button onclick="ifFunction()">If Function</button>
+
+<script>
+  var myElement = document.getElementById('myid')
+  function myFunction(){       
+    myElement.innerHTML = 'My first Javascript class'
+  }
+  function myFunction2(){   
+    myElement.innerHTML = 'My another  Javascript class'
+  }
+  function myFunction3(){   
+    myElement.classList.add("test")
+  }
+  function myFunction4(){   
+    myElement.classList.toggle("textSizeLarge")
+    myElement.classList.toggle("test")
+  }
+  function myFunction5(){   
+    myElement.classList.remove("textSizeLarge")
+    myElement.classList.remove("test")
+   
+    // console.log('Remove Class')
+  }
+  function writeFunction(){
+    myElement.innerHTML = '<div class="test textSizeLarge">Hello world </div>';
+  }
+
+  function ifFunction(){
+    var a = 2;
+    var b = '2';
+
+    if(b == 2){
+      myElement.innerHTML = '<div class="test textSizeLarge">It is 2 </div>';
+      console.log('Type a', typeof(a))
+      console.log('Type b', typeof(b))
+    }else{
+      myElement.innerHTML = 'A is greater or smaller than 2'
+      console.log('Type b', typeof(b))
+      console.log('Type a', typeof(a))
+    }
+  }
+  
+</script>
+  
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
