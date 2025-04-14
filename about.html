@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins&display=swap"
+        rel="stylesheet">
+    <title>HS Accessories</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+<header class="bg-gray-200 py-4 px-6 flex justify-between items-center mx-auto">
+    <h1 class="text-2xl text-[#8A2340] font-bold inter-400">THE HS ACCESSORIES</h1>
+
+    <!-- Hamburger Icon (Mobile & Tablet View) -->
+    <div class="lg:hidden flex items-center" id="hamburger-icon">
+        <button class="text-black" onclick="toggleSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Navigation (Desktop View) -->
+    <nav class="hidden lg:flex space-x-6 text-black font-semibold">
+        <ul class="flex space-x-6">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="product.html">Product & Solution</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sidebar Menu (Mobile & Tablet View) -->
+<div id="sidebar" class="lg:hidden fixed inset-0 bg-gray-800 bg-opacity-50 z-50 hidden">
+    <div class="w-64 bg-white h-full shadow-lg p-4">
+        <div class="flex justify-end">
+            <button onclick="toggleSidebar()" class="text-black text-2xl">&times;</button>
+        </div>
+        <ul class="space-y-4">
+            <li><a href="index.html" class="text-black">Home</a></li>
+            <li><a href="about.html" class="text-black">About Us</a></li>
+            <li><a href="product.html" class="text-black">Product & Solution</a></li>
+            <li><a href="sustainability.html" class="text-black">Sustainability</a></li>
+            <li><a href="contact.html" class="text-black">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+    <!-- Slider Section -->
+    <div class="relative w-full overflow-hidden mx-auto">
+        <!-- Slider Container -->
+        <div class="relative flex transition-transform duration-500 ease-in-out" id="slider">
+            <!-- Slide 1 -->
+            <div class="w-full h-[500px] flex-shrink-0 relative">
+                <img src="https://s3-alpha-sig.figma.com/img/9711/3de0/6f6baa41fd12222ecdaaff8e7ce88689?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=J6ACvz38oD9Cm-LC7hwtsUd6Y1~~RK-9jhnCjVuf92x7ZaJUTPRGSbgonR5mP5jyYi~y336X-sc~yg-~86m-zMZo1~9-b5neIOFn-T-uU5epvAcAwQs8Pwgb7qg69cFfN4CNTUnuWFtLb82-BcupiexZ9DUcKhUQx8cMCdlFL9NpuxlKb3lnRhA7OmcAN~GAiP-6~AABBhUNZC0~DIoopU9bLYxWsacSBsxtjSerDqfEjU2VRYEGtxZsRyZcVxk~qdS945wAUlE7dsFQOU2yM40He2qieMWmrdWwsYPWXzDvVXMTyx9hGVx-wYu4aQKLkQoQWdnRJeXEFUSrRybT~A__"
+                    class="w-full h-full object-cover" style="filter: blur(3px);" alt="Image 1">
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
+                    <h2 class="text-3xl md:text-7xl font-bold">ABOUT US</h2>
+                    <p class="mt-2 text-lg">ACCESSORISE, ATTRACT...ATTACK.</p>
+                    <a href="#"
+                        class="mt-6 px-6 py-3  bg-[#8A2340] text-white rounded-full flex items-center space-x-2">
+                        <span>Explore More</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="w-full h-[500px] flex-shrink-0 relative">
+                <img src="http://img.freepik.com/free-photo/handsome-bearded-tailor-working-with-cloth-samples-sewing-workshop_613910-4435.jpg"
+                    class="w-full h-full object-cover" alt="Image 2" style="filter: blur(3px);">
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
+                    <h2 class="text-3xl md:text-7xl font-bold">CRAFTED WITH PASSION</h2>
+                    <p class="mt-2 text-lg">QUALITY THAT SPEAKS FOR ITSELF.</p>
+                    <a href="#" class="mt-6 px-6 py-3 bg-[#8A2340] text-white rounded-full flex items-center space-x-2">
+                        <span>Discover More</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="w-full h-[500px] flex-shrink-0 relative">
+                <img src="https://img.freepik.com/free-photo/clothing-store-with-blurred-effect_23-2148164717.jpg"
+                    class="w-full h-full object-cover" alt="Image 3" style="filter: blur(3px);">
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
+                    <h2 class="text-3xl md:text-7xl font-bold">ELEVATE YOUR LOOK</h2>
+                    <p class="mt-2 text-lg">FASHION THAT INSPIRES.</p>
+                    <a href="#" class="mt-6 px-6 py-3 bg-[#8A2340] text-white rounded-full flex items-center space-x-2">
+                        <span>Shop Now</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrows -->
+        <button onclick="prevSlide()"
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#8A2340] text-white p-2 rounded-full">&#10094;</button>
+        <button onclick="nextSlide()"
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#8A2340] text-white p-2 rounded-full">&#10095;</button>
+
+        <!-- Dots -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <div class="dot w-3 h-3 bg-gray-500 rounded-full" onclick="setSlide(0)"></div>
+            <div class="dot w-3 h-3 bg-gray-300 rounded-full" onclick="setSlide(1)"></div>
+            <div class="dot w-3 h-3 bg-gray-300 rounded-full" onclick="setSlide(2)"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <section class="container mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-2 gap-6 p-6 rounded-lg">
+            <!-- Left Side: Video -->
+            <div class="flex items-center justify-center">
+                <iframe class="w-full h-64 md:h-80 lg:h-96" src="https://www.youtube.com/embed/4R73agfIa4I" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+    
+            <!-- Right Side: Text -->
+            <div class="flex items-center justify-center">
+                <p class="text-lg text-gray-700 text-center text-justify leading-relaxed">
+                    The HS Accessories – Elevating Garment Accessories Manufacturing in Bangladesh
+                    Established in 2025, The HS Accessories was founded with a vision to provide world-class backward
+                    linkage support to Bangladesh’s thriving export-oriented garments industry. With a commitment to
+                    excellence, innovation, and quality.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container mx-auto px-6 sm:px-20 py-12">
+        <p class="text-2xl text-center border-b border-[#8A2340] py-4">MISSION</p>
+        <p class="text-lg text-gray-700 text-center text-justify leading-relaxed py-9">
+            The mission of The HS Accessories is to be a leading manufacturer of high-quality garment accessories,
+            ensuring excellence in every product we deliver. We are committed to innovation, efficiency, and
+            sustainability, constantly improving our production processes to meet the evolving needs of the global
+            fashion industry. Our focus is on maintaining international standards in quality, compliance, and
+            environmental responsibility while ensuring customer satisfaction through precision, durability, and
+            consistency. By investing in advanced technology and skill development, we aim to enhance productivity and
+            efficiency. We strive to build strong partnerships with the apparel industry by offering reliable services,
+            timely deliveries, and customized solutions tailored to our clients' needs. Our goal is to create a seamless
+            supply chain that supports Bangladesh’s growing textile sector while maintaining ethical business practices.
+            Sustainability is at the core of our operations, and we continuously explore eco-friendly materials and
+            production techniques to minimize our environmental impact. Through continuous research and development, we
+            seek to introduce innovative designs and solutions that add value to the fashion industry. With a highly
+            skilled workforce and state-of-the-art manufacturing facilities, we are dedicated to delivering excellence
+            in every aspect of our business.
+        </p>
+    </div>
+    
+    <div class="container mx-auto px-6 sm:px-20 py-12">
+        <p class="text-2xl text-center border-b border-[#8A2340] py-4">VISION</p>
+        <p class="text-lg text-gray-700 text-center text-justify leading-relaxed py-9">
+            Our vision is to establish The HS Accessories as a globally recognized and trusted name in the garment
+            accessories industry, known for its commitment to quality, innovation, and sustainability. We aspire to set
+            new benchmarks in manufacturing excellence, ensuring that our products meet the highest international
+            standards while staying ahead of market trends. Our goal is to expand our production capacity and strengthen
+            our presence in both local and international markets, catering to the growing demands of the apparel
+            industry. We envision a future where our brand becomes synonymous with reliability and superior
+            craftsmanship, continuously enhancing our product range with cutting-edge designs and advanced technology.
+            As part of our long-term strategy, we are dedicated to promoting sustainable manufacturing practices,
+            reducing waste, and implementing environmentally responsible solutions. By fostering a culture of growth,
+            collaboration, and excellence, we aim to create a positive impact not only within our organization but also
+            in the broader textile and fashion industry. Through continuous improvement and strategic expansion, we seek
+            to contribute to the success of Bangladesh’s garments sector, reinforcing our position as a key player in
+            the global supply chain.
+        </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-[#8A2340] text-white py-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+            <!-- Company Name -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">THE HS ACCESSORIES</h3>
+            </div>
+
+            <!-- Contact Us -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                <p class="text-sm">25/2, Hazi Nowab Ali Road, Boro Dewra, Tongi, Gazipur-1711</p>
+                <p class="text-sm mt-2">Email: info@hs.com.bd</p>
+            </div>
+
+            <!-- Company Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Company</h3>
+                <a href="#" class="block text-sm hover:underline mb-2">About Us</a>
+                <a href="#" class="block text-sm hover:underline mb-2">Sustainability</a>
+                <a href="#" class="block text-sm hover:underline">Careers</a>
+            </div>
+
+            <!-- Social Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Social Links</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-8">
+            <p class="text-sm">© <span id="current-year"></span> - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/script.js"></script>
+
+
+
+
+</body>
+
+</html>

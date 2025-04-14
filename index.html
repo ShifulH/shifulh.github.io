@@ -1,140 +1,459 @@
-<!doctype html>
-<html lang="">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SHIFUL </title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
- 
-  <style>
-    .test {
-      color: red;
-      font-weight: 900;
-    }
-    .bg {
-      background-color: gainsboro;
-      min-height:300px;
-    }
-    .textSizeLarge{
-      font-size: 4rem;
-    }
-  </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins&display=swap"
+        rel="stylesheet">
+    <title>HS Accessories</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="">
+    <!-- Header -->
+<header class="bg-gray-200 py-4 px-6 flex justify-between items-center mx-auto">
+    <h1 class="text-2xl text-[#8A2340] font-bold inter-400">THE HS ACCESSORIES</h1>
 
-  <!-- Add your site or application content here -->
-  
-  
-  <div id="myid">Welcome to Shiful</div>
+    <!-- Hamburger Icon (Mobile & Tablet View) -->
+    <div class="lg:hidden flex items-center" id="hamburger-icon">
+        <button class="text-black" onclick="toggleSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
 
-  
-  <!-- <p id="myseondid">opening </p> -->
+    <!-- Navigation (Desktop View) -->
+    <nav class="hidden lg:flex space-x-6 text-black font-semibold">
+        <ul class="flex space-x-6">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="product.html">Product & Solution</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-  <script>
-     
-    var newVar = document.getElementById("myid");
-    function myfirstFunc(){
-      newVar.innerHTML = "<div> <h1>hello world: </h1> <p> this is a test</p> </div>";
-      newVar.classList.add("test");
-      newVar.classList.remove("bg");
-    }
+<!-- Sidebar Menu (Mobile & Tablet View) -->
+<div id="sidebar" class="lg:hidden fixed inset-0 bg-gray-800 bg-opacity-50 z-50 hidden">
+    <div class="w-64 bg-white h-full shadow-lg p-4">
+        <div class="flex justify-end">
+            <button onclick="toggleSidebar()" class="text-black text-2xl">&times;</button>
+        </div>
+        <ul class="space-y-4">
+            <li><a href="index.html" class="text-black">Home</a></li>
+            <li><a href="about.html" class="text-black">About Us</a></li>
+            <li><a href="product.html" class="text-black">Product & Solution</a></li>
+            <li><a href="sustainability.html" class="text-black">Sustainability</a></li>
+            <li><a href="contact.html" class="text-black">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+    <!-- Slider Section -->
+    <div class="relative w-full overflow-hidden mx-auto">
+        <!-- Slider Container -->
+        <div class="relative flex transition-transform duration-500 ease-in-out" id="slider">
+            <!-- Slide 1 -->
+            <div class="w-full h-[500px] flex-shrink-0 relative">
+                <img src="https://img.freepik.com/free-photo/close-up-image-lot-coils-with-threads-sewing-workshop_613910-4427.jpg?t=st=1742536202~exp=1742539802~hmac=7404c372cbb341d13c035de1a2728e1ad35f4afbe48f118dbb02d972a4e48f6f&w=996"
+                    class="w-full h-full object-cover" style="filter: blur(3px);" alt="Image 1">
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
+                    <h2 class="text-3xl md:text-7xl font-bold">STYLE THAT DEFINES YOU</h2>
+                    <p class="mt-2 text-lg">ACCESSORISE, ATTRACT...ATTACK.</p>
+                    <a href="#"
+                        class="mt-6 px-6 py-3  bg-[#8A2340] text-white rounded-full flex items-center space-x-2">
+                        <span>Explore More</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="w-full h-[500px] flex-shrink-0 relative">
+                <img src="http://img.freepik.com/free-photo/handsome-bearded-tailor-working-with-cloth-samples-sewing-workshop_613910-4435.jpg"
+                    class="w-full h-full object-cover" alt="Image 2" style="filter: blur(3px);">
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
+                    <h2 class="text-3xl md:text-7xl font-bold">CRAFTED WITH PASSION</h2>
+                    <p class="mt-2 text-lg">QUALITY THAT SPEAKS FOR ITSELF.</p>
+                    <a href="#" class="mt-6 px-6 py-3 bg-[#8A2340] text-white rounded-full flex items-center space-x-2">
+                        <span>Discover More</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="w-full h-[500px] flex-shrink-0 relative">
+                <img src="https://img.freepik.com/free-photo/clothing-store-with-blurred-effect_23-2148164717.jpg"
+                    class="w-full h-full object-cover" alt="Image 3" style="filter: blur(3px);">
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
+                    <h2 class="text-3xl md:text-7xl font-bold">ELEVATE YOUR LOOK</h2>
+                    <p class="mt-2 text-lg">FASHION THAT INSPIRES.</p>
+                    <a href="#" class="mt-6 px-6 py-3 bg-[#8A2340] text-white rounded-full flex items-center space-x-2">
+                        <span>Shop Now</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrows -->
+        <button onclick="prevSlide()"
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#8A2340] text-white p-2 rounded-full">&#10094;</button>
+        <button onclick="nextSlide()"
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#8A2340] text-white p-2 rounded-full">&#10095;</button>
+
+        <!-- Dots -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <div class="dot w-3 h-3 bg-gray-500 rounded-full" onclick="setSlide(0)"></div>
+            <div class="dot w-3 h-3 bg-gray-300 rounded-full" onclick="setSlide(1)"></div>
+            <div class="dot w-3 h-3 bg-gray-300 rounded-full" onclick="setSlide(2)"></div>
+        </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="container relative w-full ">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <!-- Left Side: Text Content -->
+            <div class="flex flex-col items-start justify-center mr-8 p-6 md:p-12  text-black">
+                <h1 class="text-3xl md:text-2xl font-bold">Swift, Secure, and Stress-Free </br> Shipping – Your Order,
+                    Our Priority!</h1>
+                <p class="text-lg md:text-lg mt-4">Seamless Delivery, Every Time – Fast, Trusted, And Effortless!</p>
+                <button
+                    class="mt-6 px-6 py-3 border border-[#8A2340] text-[#8A2340] rounded-full hover:bg-[#8A2340] hover:text-white transition">
+                    → Explore More
+                </button>
+            </div>
+
+            <!-- Right Side: Image -->
+            <div class="w-full h-full">
+                <img src="https://img.freepik.com/free-vector/world-logistic-network-template_1284-14967.jpg?t=st=1742536049~exp=1742539649~hmac=1f20b990424692dd59158d32cadb3d362b5b1657184a23313beb62661447effd&w=740"
+                    alt="Shipping Image" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Eco-Friendly Section -->
+    <section class="mx-auto px-6 py-12"
+        style="background-image: url('https://s3-alpha-sig.figma.com/img/6d01/2fdb/cee3555be9a138295731b47e81331685?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=FX6cocWkfD8btonAnUCgTr4FaCJAK3HvO8uYUXAaaegjBp~e2pH7fqG1JZcK0mMoZqVEyU8TR6rgi-WKJSha8c3mqapk3LZ0lmp2sTbJMouswqaRPHFYsrlDOpgV1cpshdWv4CvgmXMDeNpGytS7ycLGfIvijQRvNJvN82kQ2zVIKz5oFDqaw6xs9Z2aYNMee7qrFBrquTAQKWInfApgfG9hLeKPz-8nLu6XQ59Uvd6g0X1WiSwjDU116TcwQMhBSdPCOj1STabECfLIIYPSUoRfHeJQWL8eDZ~HxFBC50cUU7Po5PwrD~r1jdKuW8Dew8c-m5ktIV3vxb1OpiIuVw__'); background-size: cover; background-position: center;">
+        <div class="grid md:grid-cols-2 gap-6 p-6 rounded-lg">
+            <!-- Left Side: Centered Text and Image -->
+            <div class="flex flex-col items-center justify-center text-center relative">
+
+                <!-- Main Heading -->
+                <h2 class="text-2xl md:text-3xl lg:text-2xl text-gray-800 font-bold">
+                    Eco-Friendly Choice – Completely Recycled And Easily Recyclable!
+                </h2>
+                <!-- Image -->
+                <img src="https://s3-alpha-sig.figma.com/img/ae08/17c3/ef105170066d4a16f46f014c7b2b1457?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=j6SyircdvFwpQJ4iA3rwQYlFSKgscW-Qn2fnFoCEfcrhdn9tt9t2vmAtgJrlg~xhWhvZQdkile9dmhIXko6vbTWMXBLh4dlyExMp89Ktz2tULYpZ4izLU3O25ivKcqflE7y0VnsUdlBqDPYYy5IwWqoutOVxkxaPx2kFsp8JQZkWa9g8jWG6CzvMR5oc1Z1a8Fd-GKf0R17J-KRVsuvEAXa6q0Cp7IeUtcVVMlhl4BE2b784fZSO6eUa1Um6HLAsUhgnGV7GT64-Zi47ScEq1uKxwQl15NUdLCDAwDelnnL7rWf5MpQSdPBDzk0KOkPP8y60b-hRDZsyx1Bo37uxPA__"
+                    alt="Eco-Friendly Packaging" class="mt-6 w-48 h-auto rounded-lg shadow-lg">
+
+                <!-- Subtitle -->
+                <p class="mt-4 italic text-gray-600">
+                    Establish Eco-Friendly Packaging As The Standard For HS Accessories.
+                </p>
+
+
+
+                <!-- Rotated Text (Aligned to Left Side) -->
+                <!-- <div
+                    class="absolute flex gap-1 left-3 bottom-3 top-1/2 transform -translate-y-1/2 -rotate-90 origin-left text-gray-500 ">
+                    <p>Narrow</p>♦️
+                    <p>Sewing</p>♦️
+                    <p>Packaging</p>♦️
+                    <p>woven</p>
+                </div> -->
+
+            </div>
+
+            <!-- Right Side: Text -->
+            <div>
+                <p class="text-lg text-gray-700 text-justify leading-relaxed">
+                    <em>"Choosing Eco-Friendly Products Is More Than Just A Trend—It’s A Commitment To A Sustainable
+                        Future.
+                        Our Packaging Is Made From 100% Recycled Materials And Is Designed To Be Easily Recyclable,
+                        Ensuring
+                        Minimal Environmental Impact. By Opting For Our Eco-Conscious Solutions, You’re Not Only
+                        Reducing Waste
+                        But Also Contributing To A Cleaner, Greener Planet. Small Choices Today Can Create A Big Impact
+                        Tomorrow—
+                        Let’s Build A Sustainable Future Together!"</em>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto py-14 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+                <!-- Left Section -->
+                <div class="text-center ">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl  leading-tight">
+                        A COMMITMENT <br> TO GLOBAL <br> EXCELLENCE
+                    </h1>
+                    <img src="https://img.freepik.com/free-vector/abstract-world-map-line-style-graphic-design_1017-42610.jpg?t=st=1742557390~exp=1742560990~hmac=831ef856e026e54de0a1f888ad0bf90d629f44e5d54332093a2968bfbeed6538&w=1060"
+                        alt="Global Excellence" class="mx-auto md:mx-0 mt-4 w-full max-w-lg">
+                </div>
+
+                <!-- Right Section (Stats) -->
+                <div class="bg-[#8A2340] text-white p-6 rounded-lg grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="border border-white p-6 rounded-lg text-center">
+                        <p class="text-3xl font-bold">40+</p>
+                        <p class="text-lg">Trusted Nomination Clients</p>
+                    </div>
+                    <div class="border border-white p-6 rounded-lg text-center">
+                        <p class="text-3xl font-bold">200+</p>
+                        <p class="text-lg">Total Employees</p>
+                    </div>
+                    <div class="border border-white p-6 rounded-lg text-center">
+                        <p class="text-3xl font-bold">5K+</p>
+                        <p class="text-lg">Dyeing Capacity</p>
+                    </div>
+                    <div class="border border-white p-6 rounded-lg text-center">
+                        <p class="text-3xl font-bold">5K+</p>
+                        <p class="text-lg">Sewing & Embroidery</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+
+    <div class="px-4 sm:px-10 md:px-20 bg-gray-200">
+        <div class="text-center py-8">
+            <h2 class="text-2xl font-bold">OUR CERTIFICATION</h2>
+            <div class="w-16 h-1 bg-red-800 mx-auto mt-2"></div>
+        </div>
     
-    function removeClass(){
-      newVar.innerHTML = "hello world: No color " + 9;
-      
-      
-      var x = 0;
-      var y = x > 9;
-      if (x > 9){
-        newVar.innerHTML = "X is greater than 9";
-        // newVar.classList.remove("test");
-        // newVar.classList.add("bg");
-      } else {
-        newVar.innerHTML = "X is less than 9";
-        // newVar.classList.remove("bg");
-        // newVar.classList.add("test");
-      }
-      console.log('What is y: ', y);
-    }
-   
-  
-   
-  </script>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-10">
+            <!-- Certification Items -->
+            <div class="bg-white p-4 shadow-lg rounded-lg flex items-center justify-center w-full h-[175px]">
+                <img src="https://s3-alpha-sig.figma.com/img/9846/b417/0464a476209187291500b188d1b57413?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=osqxb392t8JLYpHdlhDJjdi38Ohtyo5uRGDSKZ93A2oDP5fHX0zGWHNmT-kE57gx1R6ZMpQFHXLGYyQvT7Ziv6fXoAldKw2fKD2qWrfP3RrJj0qoL~RwBompH1~vA1Oh62W0KVSKjPArD3neovhV8Z6rfts9Yp700wGc~RQXspcOrx9nCdqCJ6mbnHkUsQmWREfb9sksI25tGcKXS975lbsJI~eY6nFwioSJD-l9LMBKh21zkJh2rwfC3p1JexA9rAX9Xwm7dByGYR~oeYr2viavQzd3lq1uPUBpyZDbZGexogF5phfyeV3NDV-j0WedTOjfzktWTWumNDCjPaL~Tw__"
+                    alt="Sedex" class="w-auto h-auto max-w-full max-h-full">
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg flex items-center justify-center w-full h-[175px]">
+                <img src="https://s3-alpha-sig.figma.com/img/63a4/b801/0071cbd604a18b9426dc5ac5fc0b94a5?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ETFyqbzXRbFEO6sidupwIQnLJBOMZHjqjbYoYGCXKz3VtEou6PiI1HeN9Asz5KCoGKeBVRhBI6E88-SNS2mz~454nJwO1SNqpSVMim5yz4nH1KD-VekND1dDJMm1hwWzYfhTFIdZUrAWAKcJgbJc5t4D3frT3hwe4YkLBjSRdZStLt6HTfG5ghcYDWeSIBTWTniuYhzXt1DW-j2FiLIbTihuofele4Bvtn8EtMVuaUpFELC7V8KoHsG0M2ySP5K1htzRmou7vk8~TlazmxEkMNJF3gJyJs~zUXGrOklkv-zFdHL1tIyw1c-GVtYVLKzx59wzlk3RW-qPUbruB3mgyA__"
+                    alt="GOTS" class="w-auto h-auto max-w-full max-h-full">
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg flex items-center justify-center w-full h-[175px]">
+                <img src="https://img.freepik.com/free-vector/tags_1308-5872.jpg?t=st=1743830187~exp=1743833787~hmac=6bcc0f2eba2cd5ccf0075c08c7458abf87117312b7b3657c3f0953eec3be9847&w=740"
+                    alt="ICS" class="w-auto h-auto max-w-full max-h-full">
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg flex items-center justify-center w-full h-[175px]">
+                <img src="https://img.freepik.com/free-vector/tags_1308-5872.jpg?t=st=1743830187~exp=1743833787~hmac=6bcc0f2eba2cd5ccf0075c08c7458abf87117312b7b3657c3f0953eec3be9847&w=740"
+                    alt="Global Recycled Standard" class="w-auto h-auto max-w-full max-h-full">
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg flex items-center justify-center w-full h-[175px]">
+                <img src="https://s3-alpha-sig.figma.com/img/9846/b417/0464a476209187291500b188d1b57413?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=osqxb392t8JLYpHdlhDJjdi38Ohtyo5uRGDSKZ93A2oDP5fHX0zGWHNmT-kE57gx1R6ZMpQFHXLGYyQvT7Ziv6fXoAldKw2fKD2qWrfP3RrJj0qoL~RwBompH1~vA1Oh62W0KVSKjPArD3neovhV8Z6rfts9Yp700wGc~RQXspcOrx9nCdqCJ6mbnHkUsQmWREfb9sksI25tGcKXS975lbsJI~eY6nFwioSJD-l9LMBKh21zkJh2rwfC3p1JexA9rAX9Xwm7dByGYR~oeYr2viavQzd3lq1uPUBpyZDbZGexogF5phfyeV3NDV-j0WedTOjfzktWTWumNDCjPaL~Tw__"
+                    alt="Sedex" class="w-auto h-auto max-w-full max-h-full">
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg flex items-center justify-center w-full h-[175px]">
+                <img src="https://s3-alpha-sig.figma.com/img/63a4/b801/0071cbd604a18b9426dc5ac5fc0b94a5?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ETFyqbzXRbFEO6sidupwIQnLJBOMZHjqjbYoYGCXKz3VtEou6PiI1HeN9Asz5KCoGKeBVRhBI6E88-SNS2mz~454nJwO1SNqpSVMim5yz4nH1KD-VekND1dDJMm1hwWzYfhTFIdZUrAWAKcJgbJc5t4D3frT3hwe4YkLBjSRdZStLt6HTfG5ghcYDWeSIBTWTniuYhzXt1DW-j2FiLIbTihuofele4Bvtn8EtMVuaUpFELC7V8KoHsG0M2ySP5K1htzRmou7vk8~TlazmxEkMNJF3gJyJs~zUXGrOklkv-zFdHL1tIyw1c-GVtYVLKzx59wzlk3RW-qPUbruB3mgyA__"
+                    alt="GOTS" class="w-auto h-auto max-w-full max-h-full">
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg flex items-center justify-center w-full h-[175px]">
+                <img src="https://s3-alpha-sig.figma.com/img/af53/612d/f88b3fe0ee08cfd25403a38fb3df6160?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ZHcKz0I4X9uZaAEjMx08nes~noJ6L5G4C4jkOs3GyJdGAx2c4S5UpKckYU66wrdJzXggLb9Dm75EeMYXbjSV9i3Y8zKqhpBiJg8a4PfUYKjY3XtiDgdkMsFRGOsaAePOb6-ogmU-PjleyEgjh7aRbPYbRCV7U~sWkfBD41hjLA6SaBKuYFp8n~O7bhMPm-8DN~1h~P0uSdQwsAQ-76c~LSyW5US69Hf9z8kSF3bE35GQP-OzZRBT3cAS0wV0GePiWRM~ePsLzOEte1zNHDDAM55ZDuh6mGsYIVA-1EJZeHvVCFIDNfEpdFeQa4jK9yKcNPHw3lkJ~dCvrQ5H7b0sJg__"
+                    alt="ICS" class="w-auto h-auto max-w-full max-h-full">
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg flex items-center justify-center w-full h-[175px]">
+                <img src="https://s3-alpha-sig.figma.com/img/76e0/0e93/ab39cc7d3c45eb8ee0df7d6cd40ce1c5?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VCsjhMWJ~caY-jnUQonhbDW2Vh52zgmmSf7F2zeGaawbIP8ry6DoLDrDFL15kFfMMSfXlw~kOby990iHjl6NKpmqO9wzYiSazkG4ym02JSPu0ywlIMsNRwmHwxy~Cj~Y0xQEF8L0N5KfS0aOhulX4iiozBVwoFIcsKVoBI~kuaRHJenJuswWcfdrBTfQxoZE-kBcnDCOsAnrDEqwITuusWCVNFCiz-VF9WvZH-RLjEPcZiuKBBE8lybfiEN~AvBVxfG91~fx6nrOPM13uqMyV~P~1gmRR33jW1qtiYdMqs2YT1~pZvmanXnLvQbTT6ajHNYzqwNX8XpNkNGT6k1fHg__"
+                    alt="Global Recycled Standard" class="w-auto h-auto max-w-full max-h-full">
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg flex items-center justify-center w-full h-[175px]">
+                <img src="https://s3-alpha-sig.figma.com/img/9846/b417/0464a476209187291500b188d1b57413?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=osqxb392t8JLYpHdlhDJjdi38Ohtyo5uRGDSKZ93A2oDP5fHX0zGWHNmT-kE57gx1R6ZMpQFHXLGYyQvT7Ziv6fXoAldKw2fKD2qWrfP3RrJj0qoL~RwBompH1~vA1Oh62W0KVSKjPArD3neovhV8Z6rfts9Yp700wGc~RQXspcOrx9nCdqCJ6mbnHkUsQmWREfb9sksI25tGcKXS975lbsJI~eY6nFwioSJD-l9LMBKh21zkJh2rwfC3p1JexA9rAX9Xwm7dByGYR~oeYr2viavQzd3lq1uPUBpyZDbZGexogF5phfyeV3NDV-j0WedTOjfzktWTWumNDCjPaL~Tw__"
+                    alt="Sedex" class="w-auto h-auto max-w-full max-h-full">
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg flex items-center justify-center w-full h-[175px]">
+                <img src="https://s3-alpha-sig.figma.com/img/63a4/b801/0071cbd604a18b9426dc5ac5fc0b94a5?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ETFyqbzXRbFEO6sidupwIQnLJBOMZHjqjbYoYGCXKz3VtEou6PiI1HeN9Asz5KCoGKeBVRhBI6E88-SNS2mz~454nJwO1SNqpSVMim5yz4nH1KD-VekND1dDJMm1hwWzYfhTFIdZUrAWAKcJgbJc5t4D3frT3hwe4YkLBjSRdZStLt6HTfG5ghcYDWeSIBTWTniuYhzXt1DW-j2FiLIbTihuofele4Bvtn8EtMVuaUpFELC7V8KoHsG0M2ySP5K1htzRmou7vk8~TlazmxEkMNJF3gJyJs~zUXGrOklkv-zFdHL1tIyw1c-GVtYVLKzx59wzlk3RW-qPUbruB3mgyA__"
+                    alt="GOTS" class="w-auto h-auto max-w-full max-h-full">
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg flex items-center justify-center w-full h-[175px]">
+                <img src="https://s3-alpha-sig.figma.com/img/af53/612d/f88b3fe0ee08cfd25403a38fb3df6160?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ZHcKz0I4X9uZaAEjMx08nes~noJ6L5G4C4jkOs3GyJdGAx2c4S5UpKckYU66wrdJzXggLb9Dm75EeMYXbjSV9i3Y8zKqhpBiJg8a4PfUYKjY3XtiDgdkMsFRGOsaAePOb6-ogmU-PjleyEgjh7aRbPYbRCV7U~sWkfBD41hjLA6SaBKuYFp8n~O7bhMPm-8DN~1h~P0uSdQwsAQ-76c~LSyW5US69Hf9z8kSF3bE35GQP-OzZRBT3cAS0wV0GePiWRM~ePsLzOEte1zNHDDAM55ZDuh6mGsYIVA-1EJZeHvVCFIDNfEpdFeQa4jK9yKcNPHw3lkJ~dCvrQ5H7b0sJg__"
+                    alt="ICS" class="w-auto h-auto max-w-full max-h-full">
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg flex items-center justify-center w-full h-[175px]">
+                <img src="https://s3-alpha-sig.figma.com/img/76e0/0e93/ab39cc7d3c45eb8ee0df7d6cd40ce1c5?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VCsjhMWJ~caY-jnUQonhbDW2Vh52zgmmSf7F2zeGaawbIP8ry6DoLDrDFL15kFfMMSfXlw~kOby990iHjl6NKpmqO9wzYiSazkG4ym02JSPu0ywlIMsNRwmHwxy~Cj~Y0xQEF8L0N5KfS0aOhulX4iiozBVwoFIcsKVoBI~kuaRHJenJuswWcfdrBTfQxoZE-kBcnDCOsAnrDEqwITuusWCVNFCiz-VF9WvZH-RLjEPcZiuKBBE8lybfiEN~AvBVxfG91~fx6nrOPM13uqMyV~P~1gmRR33jW1qtiYdMqs2YT1~pZvmanXnLvQbTT6ajHNYzqwNX8XpNkNGT6k1fHg__"
+                    alt="Global Recycled Standard" class="w-auto h-auto max-w-full max-h-full">
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div class="max-w-7xl mx-auto py-28">
+
+
+        <div class="text-center mb-10">
+            <h2 class="text-2xl font-bold">OUR PARTNERS</h2>
+            <div class="w-16 h-1 bg-red-800 mx-auto mt-2 mb-6"></div>
+
+            <!-- Swiper Container -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div
+                        class="swiper-slide flex items-center justify-center bg-white shadow-lg rounded-lg p-4 w-[205px] h-[139px]">
+                        <img src="https://img.freepik.com/free-vector/tags_1308-5872.jpg?t=st=1743830187~exp=1743833787~hmac=6bcc0f2eba2cd5ccf0075c08c7458abf87117312b7b3657c3f0953eec3be9847&w=740"
+                            alt="Tesco" class="max-w-full">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div
+                        class="swiper-slide flex items-center justify-center bg-white shadow-lg rounded-lg p-4 w-[205px] h-[139px]">
+                        <img src="https://s3-alpha-sig.figma.com/img/43d7/1733/b64b05d47e7daf1e6c8ed757a56477f1?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=njrSxDNOG5yreZ~aWcrV8P9dnj1NDLlYfE5CV3IIuo78IyzQQrzAMejIzM40DPAw~K2VOIjjzoKoBDHXkZna5ykehiykvCordVLvD9-G2ZjoACpQyT2~FerclW8m1zBu4wcHNE55KDIIGIIgUWXhWTII7yu~57FjsAF9fgpOK7pt9BQsliKDtKgBlwA4MxWonunJaAQJDnAZexD1vQTC9Ei~iKAQoMkzt54mG7fG-6J9wwW5V6eIspDjckADyHajUrsB7Z7dFNixYPeMyW5-vVA2McEGDr3kHYUttIe0lzH3WpvVSev~Xbs-b6WjvWMaIvXcaDRUFTiyjCr3rJJ6fA__"
+                            alt="Ahléns" class="max-w-full">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div
+                        class="swiper-slide flex items-center justify-center bg-white shadow-lg rounded-lg p-4 w-[205px] h-[139px]">
+                        <img src="https://s3-alpha-sig.figma.com/img/7d70/cada/d9ed276228fe59950d6b2b3da50f83aa?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=K6mNHp0jqwYDi-zX9QIcmgmYpI7chDMOmSgMsNUS3gvxU~LHaYlEwI2QmDL48xwS52ZMywpJy6hDu~EjZLKNFycJYi2wxLEfUXVYEeqg33MFCHH6Pi-TDb-YX6qtzB9v0fM5BBlb2~mttabXvtbn9Od6XV1AkU~OZ5DnExzmg9nttaWLblHiPvO4Alo2rFrVzBxW6s8zdvqS-pNknR3B4pyubjp2zVr5CEqqlP0akVR29B~ZbMg5eBuuerr4Z~UGDr44PG0mOtZNJ7ccad7Uc-QV2ROJiX8xyn2~9BMLJHN99zcuej6mAfuSE7uAxoWumiMeWriMY2kGr~6M4KLq9w__"
+                            alt="Startex" class="max-w-full">
+                    </div>
+                    <!-- Slide 4 -->
+                    <div
+                        class="swiper-slide flex items-center justify-center bg-white shadow-lg rounded-lg p-4 w-[205px] h-[139px]">
+                        <img src="https://s3-alpha-sig.figma.com/img/7089/1957/eed97726595857af937f46f42babc77a?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=k44NiHbr64VCLKRVZyBdc3E-L~DJ-mNj3SCLOUH3kJl3wASURdJAdN48WUPLNqn3zNbtz54DN0TRbLHnYgom7abMd7W~0XN5rMrqis4nZiyWiXu2CHt7CJwshlsfUENG3I3HpmM-1oNlzXNNlDykYg64khG6alstgWi5O6vwdUcFCFFUDPE7UMYNRKlQ~49OCW0xzIOkR8XlG5HiFk3H8u7ECCkIo6dljYnlyH8sJghb-6p7AN1WQ-bSZGnGYZN5FV3D6j95z2epUgDruV0buobeMrvBMmFq9RVkCU8PSrlU4GDPLLLwiibYUVbvX2Iyh2aL~zLP1BQkJsp1QsEbHQ__"
+                            alt="Tom Tailor" class="max-w-full">
+                    </div>
+                    <!-- Slide 5 -->
+                    <div
+                        class="swiper-slide flex items-center justify-center bg-white shadow-lg rounded-lg p-4 w-[205px] h-[139px]">
+                        <img src="https://s3-alpha-sig.figma.com/img/aa51/30aa/dd5b89a94f9393101e53867a04297951?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=n1WWSyRtFFJcbFAZuiXYElEll3Dgf-Wv4re1p9Z~~RMzXkJ-cesJWtbwJ0aLW8qvSpXDBMe-qWuvO3G0jao6vWtWIvQaw~WRTArxZ9fqF5cL2n6W2uVXlvsbkco0b8mrcIvu33Rl~QNmtrEhRwj1mtINK48QT99Ue-TnmnRBl1gZ1GIf0pjD4q8~dwr0gQhfp0koWqMnIwmz0KpB4IqbvTzMU9qQYXJxv2YcYgVJHnfmOmjEuh4Yp-HIugPIX31qZbNUViILOTNh0N44R~TaiElsqToR-~5n2bB-hP4ivLnCwiTRKyNgowMLvzLlGB62P9q8Ac8jUaLBl5KMgOE1BA__"
+                            alt="Kohl's" class="max-w-full">
+                    </div>
+                </div>
+
+                <!-- Pagination Dots -->
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        </div>
+
+        <!-- Subscription Form Section -->
+        <div class="max-w-2xl mx-auto  p-8  rounded-lg py-28">
+            <h3 class="text-center text-lg font-semibold mb-4">If you want, we'll keep you updated on the latest news
+                about accessories</h3>
+            <form class="space-y-4">
+                <input type="text" placeholder="Enter your name" class="w-full p-3 border rounded-lg">
+                <input type="tel" placeholder="Enter your mobile number" class="w-full p-3 border rounded-lg">
+                <input type="email" placeholder="Enter your email address" class="w-full p-3 border rounded-lg">
+                <div class="flex items-center">
+                    <input type="checkbox" id="consent" class="mr-2">
+                    <label for="consent" class="text-sm">I accept to receive commercial and promotional information at
+                        this email address.</label>
+                </div>
+                <button type="submit"
+                    class="w-full bg-red-800 text-white py-3 rounded-lg font-semibold">Subscribe</button>
+            </form>
+        </div>
+    </div>
 
 
 
-  
-  <button onclick="myfirstFunc()">Add Class</button>
-  <button onclick="removeClass()">Remove Class</button>
-  <button onclick="mysecondFunc()">my second button</button>
-  <button onclick="myFunction()">Change Text</button>
-  <button onclick="myFunction2()">Change Another Text</button>
-  <button onclick="myFunction3()">Class-test</button>
-  <button onclick="myFunction4()">Class Large Text and Toggle</button>
-  <button onclick="myFunction5()">Class Remove</button>
-  <button onclick="writeFunction()">Write Function</button>
-  <button onclick="ifFunction()">If Function</button>
 
-<script>
-  var myElement = document.getElementById('myid')
-  function myFunction(){       
-    myElement.innerHTML = 'My first Javascript class'
-  }
-  function myFunction2(){   
-    myElement.innerHTML = 'My another  Javascript class'
-  }
-  function myFunction3(){   
-    myElement.classList.add("test")
-  }
-  function myFunction4(){   
-    myElement.classList.toggle("textSizeLarge")
-    myElement.classList.toggle("test")
-  }
-  function myFunction5(){   
-    myElement.classList.remove("textSizeLarge")
-    myElement.classList.remove("test")
-   
-    // console.log('Remove Class')
-  }
-  function writeFunction(){
-    myElement.innerHTML = '<div class="test textSizeLarge">Hello world </div>';
-  }
 
-  function ifFunction(){
-    var a = 2;
-    var b = '2';
 
-    if(b == 2){
-      myElement.innerHTML = '<div class="test textSizeLarge">It is 2 </div>';
-      console.log('Type a', typeof(a))
-      console.log('Type b', typeof(b))
-    }else{
-      myElement.innerHTML = 'A is greater or smaller than 2'
-      console.log('Type b', typeof(b))
-      console.log('Type a', typeof(a))
-    }
-  }
-  
-</script>
-  
-  <script src="js/app.js"></script>
+    <!-- Footer -->
+    <footer class="bg-[#8A2340] text-white py-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+            <!-- Company Name -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">THE HS ACCESSORIES</h3>
+            </div>
+
+            <!-- Contact Us -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                <p class="text-sm">25/2, Hazi Nowab Ali Road, Boro Dewra, Tongi, Gazipur-1711</p>
+                <p class="text-sm mt-2">Email: info@hs.com.bd</p>
+            </div>
+
+            <!-- Company Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Company</h3>
+                <a href="#" class="block text-sm hover:underline mb-2">About Us</a>
+                <a href="#" class="block text-sm hover:underline mb-2">Sustainability</a>
+                <a href="#" class="block text-sm hover:underline">Careers</a>
+            </div>
+
+            <!-- Social Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Social Links</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="text-center mt-8">
+            <p class="text-sm">© <span id="current-year"></span> - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+    <script src="/assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+
 
 </body>
 
 </html>
+
+
+
+
+
+
+<!-- 
+/hs-accessories
+│── /assets
+│   │── /css
+│   │   ├── style.css         (Main stylesheet)
+│   │   ├── responsive.css    (For responsive styles, optional)
+│   │── /js
+│   │   ├── script.js         (Main JavaScript file)
+│   │   ├── validation.js     (For form validation, if needed)
+│   │── /images               (Store all images here)
+│   │── /fonts                (Store custom fonts if any)
+│
+│── .gitignore                 (Ignore unnecessary files in Git)
+│── about.html                 (About Us page)
+│── contact.html               (Contact page)
+│── index.html                 (Home page)
+│── product.html               (Product page)
+│── sustainability.html        (Sustainability page)
+│── favicon.ico                (Favicon icon)
+│── README.md                  (Project documentation) -->
+
+
+
+
+<!-- /hs-accessories
+│── index.html        (Main HTML File)
+│── styles.css        (External CSS File)
+│── script.js         (JavaScript File)
+│── favicon.ico       (Favicon)
+│── images/           (Folder for Images)
+│── submit.php        (Backend Processing)
+│── assets/           (Extra Resources like Fonts, Icons, etc.) -->

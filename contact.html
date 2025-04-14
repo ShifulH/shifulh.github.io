@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins&display=swap"
+        rel="stylesheet">
+    <title>HS Accessories</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Header -->
+<header class="bg-gray-200 py-4 px-6 flex justify-between items-center mx-auto">
+    <h1 class="text-2xl text-[#8A2340] font-bold inter-400">THE HS ACCESSORIES</h1>
+
+    <!-- Hamburger Icon (Mobile & Tablet View) -->
+    <div class="lg:hidden flex items-center" id="hamburger-icon">
+        <button class="text-black" onclick="toggleSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Navigation (Desktop View) -->
+    <nav class="hidden lg:flex space-x-6 text-black font-semibold">
+        <ul class="flex space-x-6">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="product.html">Product & Solution</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sidebar Menu (Mobile & Tablet View) -->
+<div id="sidebar" class="lg:hidden fixed inset-0 bg-gray-800 bg-opacity-50 z-50 hidden">
+    <div class="w-64 bg-white h-full shadow-lg p-4">
+        <div class="flex justify-end">
+            <button onclick="toggleSidebar()" class="text-black text-2xl">&times;</button>
+        </div>
+        <ul class="space-y-4">
+            <li><a href="index.html" class="text-black">Home</a></li>
+            <li><a href="about.html" class="text-black">About Us</a></li>
+            <li><a href="product.html" class="text-black">Product & Solution</a></li>
+            <li><a href="sustainability.html" class="text-black">Sustainability</a></li>
+            <li><a href="contact.html" class="text-black">Contact</a></li>
+        </ul>
+    </div>
+</div>
+    <!-- Contact Header -->
+    <section class="bg-cover bg-center h-60 flex flex-col justify-center items-center text-white"
+        style="background-image: url('https://img.freepik.com/free-photo/dressmaker-is-measuring-fabric-with-meter-his-studio-man-is-looking-camera-he-is-wearing-denim-cap-glasses-there-are-lot-sewing-tools-background_613910-21802.jpg?t=st=1742532092~exp=1742535692~hmac=f7aeb45069b9bb952b6400a177f9c53b8885e3907ad623b290c43ad8b88ff066&w=996');">
+        <h1 class="text-4xl font-bold">GET IN TOUCH</h1>
+        <p class="text-lg">Explore more</p>
+    </section>
+
+    <div class="container mx-auto px-4 py-10">
+        <div class="flex justify-center items-center py-6">
+            <p class="px-12 py-2 bg-[#8A2340] text-white font-semibold">
+                CONTACT US
+            </p>
+        </div>
+        <!-- Contact Form Section -->
+        <div class="max-w-5xl mx-auto bg-white p-8 rounded-lg  flex flex-col md:flex-row gap-10">
+           
+            <!-- Form Section -->
+            <div class="w-full md:w-2/3">
+                <h2 class="text-lg font-semibold text-gray-700 mb-4">Feel Free to Drop Us a Line:</h2>
+                
+                <form class="space-y-4">
+                    <input type="text" placeholder="Name" class="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-[#8A2340]">
+                    <input type="text" placeholder="Phone No" class="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-[#8A2340]">
+                    <input type="email" placeholder="Email" class="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-[#8A2340]">
+                    <input type="text" placeholder="Company" class="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-[#8A2340]">
+                    <textarea placeholder="Comments" class="w-full px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-[#8A2340] h-24"></textarea>
+
+                    <!-- ReCAPTCHA Placeholder -->
+                    <div class="w-full">
+                        <div class="border p-4 text-center  bg-gray-200">[reCAPTCHA Placeholder]</div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full md:w-auto px-9 py-2 bg-[#8A2340] text-white font-semibold  hover:bg-[#502e2b] transition duration-300">
+                        Send
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Info Section -->
+            <div class="w-full md:w-1/3 ">
+                <h2 class="text-xl font-bold text-[#8A2340]">The HS Accessories</h2>
+                <p class="text-gray-600 mt-2">25/2, Hazi Nowab Ali Road, Boro Dewra, Tongi, Gazipur-1711</p>
+
+                <div class="mt-4 space-y-3 text-gray-700">
+                    <p class="flex items-center"><span class="mr-2">📧</span> info@hs.com.bd</p>
+                    <p class="flex items-center"><span class="mr-2">📞</span> +88 01700-000000</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Google Map -->
+    
+    <div class="w-full border-t-2 border-[#70433F] py-7">
+        <div class="flex justify-center items-center py-6">
+            <p class="px-12 py-2 bg-[#8A2340] text-white font-semibold">
+                Find Us
+            </p>
+        </div>
+        <iframe class="w-full h-64 md:h-96"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33096.388055262905!2d90.38339718308796!3d23.918480270033047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c50016bc7e3d%3A0x6833fcf2965a19a0!2sHS%20Digital%20Solutions!5e0!3m2!1sen!2sbd!4v1742531646601!5m2!1sen!2sbd"
+            allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-[#8A2340] text-white py-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+            <!-- Company Name -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">THE HS ACCESSORIES</h3>
+            </div>
+
+            <!-- Contact Us -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                <p class="text-sm">25/2, Hazi Nowab Ali Road, Boro Dewra, Tongi, Gazipur-1711</p>
+                <p class="text-sm mt-2">Email: info@hs.com.bd</p>
+            </div>
+
+            <!-- Company Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Company</h3>
+                <a href="#" class="block text-sm hover:underline mb-2">About Us</a>
+                <a href="#" class="block text-sm hover:underline mb-2">Sustainability</a>
+                <a href="#" class="block text-sm hover:underline">Careers</a>
+            </div>
+
+            <!-- Social Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Social Links</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-8">
+            <p class="text-sm">© <span id="current-year"></span> - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/script.js"></script>
+
+
+
+
+</body>
+
+</html>

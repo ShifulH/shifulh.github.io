@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins&display=swap"
+        rel="stylesheet">
+    <title>HS Accessories</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+<header class="bg-gray-200 py-4 px-6 flex justify-between items-center mx-auto">
+    <h1 class="text-2xl text-[#8A2340] font-bold inter-400">THE HS ACCESSORIES</h1>
+
+    <!-- Hamburger Icon (Mobile & Tablet View) -->
+    <div class="lg:hidden flex items-center" id="hamburger-icon">
+        <button class="text-black" onclick="toggleSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Navigation (Desktop View) -->
+    <nav class="hidden lg:flex space-x-6 text-black font-semibold">
+        <ul class="flex space-x-6">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="product.html">Product & Solution</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sidebar Menu (Mobile & Tablet View) -->
+<div id="sidebar" class="lg:hidden fixed inset-0 bg-gray-800 bg-opacity-50 z-50 hidden">
+    <div class="w-64 bg-white h-full shadow-lg p-4">
+        <div class="flex justify-end">
+            <button onclick="toggleSidebar()" class="text-black text-2xl">&times;</button>
+        </div>
+        <ul class="space-y-4">
+            <li><a href="index.html" class="text-black">Home</a></li>
+            <li><a href="about.html" class="text-black">About Us</a></li>
+            <li><a href="product.html" class="text-black">Product & Solution</a></li>
+            <li><a href="sustainability.html" class="text-black">Sustainability</a></li>
+            <li><a href="contact.html" class="text-black">Contact</a></li>
+        </ul>
+    </div>
+</div>
+    <!-- Slider Section -->
+    <div class="relative w-full overflow-hidden mx-auto">
+        <!-- Slider Container -->
+        <div class="relative flex transition-transform duration-500 ease-in-out" id="slider">
+            <!-- Slide 1 -->
+            <div class="w-full h-[500px] flex-shrink-0 relative">
+                <img src="https://s3-alpha-sig.figma.com/img/3eb8/d4e3/2bcda9945f33354ec6b500acc8d47bfc?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=nvD0Ufj6C066fI0MPUqZ6srHxzl3ugU-uvlu97p2XU6p2wZrdnonlccHNM54KDl070vD8PGDE8SErW5PNHlRa4BSUTQaK5Qy0Jgm~7nKKix4CMOsMrrryOdNsykyOCjHcTEJ2mgx9Zoj5pjf3Ro31phnOpJZcRahZfTv8~83vYmxHsQDCwlQYjiFs1GEuelEgWA1XkDsMpqE~umSmSjirVuKAoFGb9ENZV9~M7G9ERJL12EWGMmMqaBTN3WOQCeIKO6GNRnGpvARttcIVAW1z69meIAawsxeOm88GTsYFGuvzuus9E4nJFGIUXPD~pqY5a-mILQ2fSbg~LeuvmvFHg__"
+                    class="w-full h-full object-cover" style="filter: blur(3px);" alt="Image 1">
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
+                    <h2 class="text-3xl md:text-7xl font-bold">OUR EXCLUSIVE PRODUCT</h2>
+                    <p class="mt-2 text-lg">ACCESSORISE, ATTRACT...ATTACK.</p>
+                    <a href="#"
+                        class="mt-6 px-6 py-3  bg-[#8A2340] text-white rounded-full flex items-center space-x-2">
+                        <span>Explore More</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="w-full h-[500px] flex-shrink-0 relative">
+                <img src="http://img.freepik.com/free-photo/handsome-bearded-tailor-working-with-cloth-samples-sewing-workshop_613910-4435.jpg"
+                    class="w-full h-full object-cover" alt="Image 2" style="filter: blur(3px);">
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
+                    <h2 class="text-3xl md:text-7xl font-bold">CRAFTED WITH PASSION</h2>
+                    <p class="mt-2 text-lg">QUALITY THAT SPEAKS FOR ITSELF.</p>
+                    <a href="#" class="mt-6 px-6 py-3 bg-[#8A2340] text-white rounded-full flex items-center space-x-2">
+                        <span>Discover More</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="w-full h-[500px] flex-shrink-0 relative">
+                <img src="https://img.freepik.com/free-photo/clothing-store-with-blurred-effect_23-2148164717.jpg"
+                    class="w-full h-full object-cover" alt="Image 3" style="filter: blur(3px);">
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
+                    <h2 class="text-3xl md:text-7xl font-bold">ELEVATE YOUR LOOK</h2>
+                    <p class="mt-2 text-lg">FASHION THAT INSPIRES.</p>
+                    <a href="#" class="mt-6 px-6 py-3 bg-[#8A2340] text-white rounded-full flex items-center space-x-2">
+                        <span>Shop Now</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrows -->
+        <button onclick="prevSlide()"
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#8A2340] text-white p-2 rounded-full">&#10094;</button>
+        <button onclick="nextSlide()"
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#8A2340] text-white p-2 rounded-full">&#10095;</button>
+
+        <!-- Dots -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <div class="dot w-3 h-3 bg-gray-500 rounded-full" onclick="setSlide(0)"></div>
+            <div class="dot w-3 h-3 bg-gray-300 rounded-full" onclick="setSlide(1)"></div>
+            <div class="dot w-3 h-3 bg-gray-300 rounded-full" onclick="setSlide(2)"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="max-w-7xl mx-auto py-16">
+        <h1 class="text-3xl font-bold text-center mb-6">All Products</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 px-5">
+            <!-- Example Product Card -->
+            <div class="relative group">
+                <a href="#" class="block relative">
+                    <img src="https://s3-alpha-sig.figma.com/img/6acb/cfb2/80cea0c5b6989778e5d13eb811c0f531?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=hEE2hYN7Qf2hc-tiarFkMpxc2pmhGhpD7z1qAT0bxCrdgY5PyoWAVOvfotFnhVtFUDFXE0gFNu9ewD-FQm6a3LmljE~qgqs4ttovUYeO2WdE9xGjRcOAP8H6FgbjJU3qxCtA7AcjHEqC3aM4SbEc8CMqDp2tQ9okWYzqmzqGxllT3PsQVEziLNINQF2GhlZiPTLSnPZelDwirqEW1GoEIqfdF-M~tCAgFaQ2QymuGl2DxyrprVfCUK9sY7P7IE-ITPN2mf16ZeQoaZg7F7eZEtDnlhZNWW5gkd5n7xtWNNhSBjH3kuV0nqnWJYitpJrFdUnA1dK0O9lCE26fwWbBcQ__"
+                        alt="Woven Label" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-lg">
+                    <div class="absolute bg-[#8A2340] bg-opacity-80 bottom-5 left-0 text-white text-lg font-bold p-2">Woven Label</div>
+                    <div class="absolute top-2 right-2 bg-white p-1 rounded-full shadow-md">🔗</div>
+                </a>
+            </div>
+            
+            <div class="relative group">
+                <a href="#" class="block relative">
+                    <img src="https://s3-alpha-sig.figma.com/img/2198/83a0/d0350a1e76994ef610a1cdfd30434b7f?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=o~nnlsBNfFDxeJ0PWqjS6cWitKhJ7WcUlAtDxFcwt1Wd7vx7PQVC4zgQXWGkJNbEwv9mi4d1lojj0q4mtsw38OR0Meq0LNQG8j~YJNQ-ZM~MlW7bL-Z~AY~h7k3~0iIWR7~fMWxyx97XqtacNh9gRKqIlxh~h8FcxWrqf0wzz6umwOIuDi9Rf1tE2sUo7hBoSI1LMKvCdXDzGYTH9aiwXIRvfvcPInuWc9HI5JGn8lXLSagzq1jWT5-UUIRBoVoop8Y0FZv4icEYMZzANQDoEWXSYpt~DmPKyE5~d77gZVpPPc-ED4i-bdKoeG~1Nwu4aL26bN-TZnbr7dZvT0JX5g__"
+                        alt="Sublimation Print" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-lg">
+                    <div class="absolute bg-[#8A2340] bg-opacity-80 bottom-5 left-0 text-white text-lg font-bold p-2">Sublimation Print</div>
+                    <div class="absolute top-2 right-2 bg-white p-1 rounded-full shadow-md">🔗</div>
+                </a>
+            </div>
+            <div class="relative group">
+                <a href="#" class="block relative">
+                    <img src="https://s3-alpha-sig.figma.com/img/38c2/1b2b/d74f8a58f058dfb4d8ce37134912fa43?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=AI-DSyw6P9VP9gwCOyf9Oi6veihskyxdNxFybRsBEOfHIXhRZOrO7nOP-AAVwxDemIDMBPVmxfjxSZ14~ZPP0RWZMr02tgdtt8YhmwbbyCRZLoeNh3uJP0N4eqxc3V8w9br8kdk~ksojDnkIxH1dWfqZGhfhQpo40ZUcqE1HGLuKlhXLxlWjwRPO4wqqRoBRolxDZ7VjWnFmjmoOiqsZ2UqVUmL5v6LJt4r2DFj-PXnioJeIaWj0zRng6uVSRM6wvWG6TIG0~uKrBhc2Zrb4VPwe7QhUwjHxEXjCx9ipMT-gTsI-7L-jaVZXeZL81DfMa~kbpc23Gv-iTd67qXlMRw__"
+                        alt="Woven Label" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-lg">
+                    <div class="absolute bg-[#8A2340] bg-opacity-80 bottom-5 left-0 text-white text-lg font-bold p-2">Woven Label</div>
+                    <div class="absolute top-2 right-2 bg-white p-1 rounded-full shadow-md">🔗</div>
+                </a>
+            </div>
+            <div class="relative group">
+                <a href="#" class="block relative">
+                    <img src="https://s3-alpha-sig.figma.com/img/e6cb/ece4/49112affe85c9d4de38d20f36934c750?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=lahs3P84yN-v6pWiw0RG344Kt90zZSc8-eQrPWBrZNwmxDs3~togc6rXyWQZb3C-G9Ck7FFoqT~Zu4xRxrUlaNiPhKYXI0BP4swQOPn~6Wlb8xB0ydqhREmV0gPoD0prTgmdsRlF0t0z0NRVFpDqdPqZ2pI6Vz8-URguyz6uGMDwIY~8bWEgz4n1LZCfjxR64I-5cJ9VfO4r7~x-iTfpBQJR59Fdq8V~JYAHdDgpEP03Vv7lntB27dIRLDcfGjZ2JFCKkfAez3nVXRvYTzIiRL8YmjMfA281HRBHgD2-O~5rwQ92TwofemKsmD5nYY1Q0GrNnZfsCwmaRZ5Nrub8ow__"
+                        alt="Woven Label" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-lg">
+                    <div class="absolute bg-[#8A2340] bg-opacity-80 bottom-5 left-0 text-white text-lg font-bold p-2">Sublimation Print</div>
+                    <div class="absolute top-2 right-2 bg-white p-1 rounded-full shadow-md">🔗</div>
+                </a>
+            </div>
+           
+            <div class="relative group">
+                <a href="#" class="block relative">
+                    <img src="https://s3-alpha-sig.figma.com/img/f6c6/3c24/b6eae80c5d0a048be1c1ecc8db1489da?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=anq~f8SzI7n5qbN0xwyAyvphfHiilyze6Xx8c-kNceoV18oMOZMX0HUWmdE-JLSQ9Vquyyl~WnHp1adwF30xPgz0olftjkkH9G5HSK1jhJp2zLFn4CS48nWcD~~Nt5HFFE-PU0WnPBV50vxBmKWRlg5rCuP23NsE0cVEarf4ftV7-ILcs-JUIrK3UqPvV8snOXZIHaeq-k46zFfVN92sFiyiB9-WRZQe9tiooUqmQFQoetobGj-Yh1~Lfg1zpbTfueYPDJW~~VnwjCi-KvaRXce8a5ZjYZLdWvGAftBLVuXc6SHvXrWZWYNxKPo5mCIIr8gA6BiSvqJn1EFYXbN34g__"
+                        alt="Woven Label" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-lg">
+                    <div class="absolute bg-[#8A2340] bg-opacity-80 bottom-5 left-0 text-white text-lg font-bold p-2">Sewing Thread</div>
+                    <div class="absolute top-2 right-2 bg-white p-1 rounded-full shadow-md">🔗</div>
+                </a>
+            </div>
+            <div class="relative group">
+                <a href="#" class="block relative">
+                    <img src="https://s3-alpha-sig.figma.com/img/c875/c923/0204c911d185822b81d6eabfa7fa548c?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=EB~N0b9zy7wk-lY3sVGc--9wLtPsNhsXW8bZaA24chWo1RAlbxC~aqhPcSHs9NqzBT-7f3TWKQdAsIgClL62W2Vbj64GDJ1YKDs8u-c8bBTr-pDs1z744xkRVgnkkLY~mQ2rJwEycrFKETbezX96RXrgNxB0wnXzM2DhEfdmPj2arwKp3m5XLeD3pbJdIHIjxaD6xCjbbO12RLVUszDNgcYpQzV9zZ7KvTIAi-cMiBbW88y8plVEdVkNgWBACcy3ltL9yIww4y8M4SHM1g~6lQZ5asIAd6XhKH0W-4ZB44hr6apN3Ke9tk2FBsdV5vBwa18VCA75b0Q1xYj7StkuhQ__"
+                        alt="Woven Label" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-lg">
+                    <div class="absolute bg-[#8A2340] bg-opacity-80 bottom-5 left-0 text-white text-lg font-bold p-2">Yarn Dyeing</div>
+                    <div class="absolute top-2 right-2 bg-white p-1 rounded-full shadow-md">🔗</div>
+                </a>
+            </div>
+           
+           
+        </div>
+        <div class="text-center mt-6">
+            <button class="bg-[#8A2340] text-white px-4 py-2 rounded-lg hover:bg-[#70434F]">See more →</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-[#8A2340] text-white py-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+            <!-- Company Name -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">THE HS ACCESSORIES</h3>
+            </div>
+
+            <!-- Contact Us -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                <p class="text-sm">25/2, Hazi Nowab Ali Road, Boro Dewra, Tongi, Gazipur-1711</p>
+                <p class="text-sm mt-2">Email: info@hs.com.bd</p>
+            </div>
+
+            <!-- Company Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Company</h3>
+                <a href="#" class="block text-sm hover:underline mb-2">About Us</a>
+                <a href="#" class="block text-sm hover:underline mb-2">Sustainability</a>
+                <a href="#" class="block text-sm hover:underline">Careers</a>
+            </div>
+
+            <!-- Social Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Social Links</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-xl hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-8">
+            <p class="text-sm">© <span id="current-year"></span> - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/script.js"></script>
+
+
+
+
+</body>
+
+</html>
